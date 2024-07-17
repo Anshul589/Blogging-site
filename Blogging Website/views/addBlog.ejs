@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    <title>Add New Blog</title>
+    <style>
+      /* Reset some default browser styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #918f90; /* Light black background */
+  color: #101010; /* Light text color for contrast */
+}
+
+/* Container styling */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #d7d1d1; /* Dark grey background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form labels */
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0c0c0c; /* Light text color */
+}
+
+/* Form controls */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #e9e7e7; /* Slightly lighter grey */
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #262525; /* Light text color */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+  background-color: #e5e2e2; /* Slightly lighter grey on focus */
+}
+
+/* Submit button */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 576px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .form-control {
+    padding: 8px;
+  }
+
+  .btn-primary {
+    padding: 8px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <%- include("./partials/nav") %>
+
+    <div class="container mt-3">
+      <form action="/blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="coverImage" class="form-label">Cover Image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="coverImage"
+            name="coverImage"
+            aria-describedby="coverImage"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            aria-describedby="title"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="floatingTextarea">Body</label>
+          <textarea name="body" class="form-control"  id="floatingTextarea"></textarea>
+        </div>
+        <div class="col-12 ">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- script -->
+    <%- include('./partials/script') %>
+  </body>
+</html>

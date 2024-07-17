@@ -1,0 +1,78 @@
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container styling */
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form labels */
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Form controls */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Form text */
+  .form-text {
+    font-size: 0.875em;
+    color: #6c757d;
+  }
+  
+  /* Submit button */
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 576px) {
+    .container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .form-control {
+      padding: 8px;
+    }
+  
+    .btn-primary {
+      padding: 8px;
+    }
+  }
+  
